@@ -1,12 +1,14 @@
 .top-container{
-
+background-color: aqua;
 }
 
 .middle-container{
+    background-color: azure;
 
 }
 
 .bottom-container{
+    background-color: aquamarine;
 
 }
 
