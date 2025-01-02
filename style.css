@@ -49,6 +49,31 @@ body{
         grid-template-columns: repeat(3, 1fr); /*Three columns */
     }
 }
+
+.project{
+    background-color: rgb(164, 107, 218);
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    grid-template-areas: 
+    "image image"
+    "name socials"
+    "description description";
+}
+
+.project_image{
+    grid-area: image;
+    width: 100%;
+}
+.project_name{
+    grid-area: name;
+}
+.socials{
+    grid-area: socials;
+}
+.description{
+    grid-area: description;
+}
+
 .bottom-container{
     background-color: aquamarine;
     display: grid;
