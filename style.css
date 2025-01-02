@@ -1,5 +1,6 @@
 body{
     font-family: 'Roboto', sans-serif;
+    padding: 50px;
     
 }
 
@@ -22,6 +23,15 @@ body{
 .about-me{
     grid-area: top2;
     text-align: left;
+    width: 350px;
+    background-color: antiquewhite;
+    padding-left: 20px;
+    padding-right: 10px;
+    
+}
+
+.about-me .socials{
+    text-align: right;
 }
 
 
@@ -34,6 +44,13 @@ body{
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
+    padding-left: 10%;
+}
+
+.project .socials{
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 15px;
 }
 
 /*Tablet layout (3 by 2) */
@@ -58,6 +75,7 @@ body{
     "image image"
     "name socials"
     "description description";
+    width: 250px;
 }
 
 .project_image{
@@ -76,12 +94,15 @@ body{
 
 .bottom-container{
     background-color: aquamarine;
+    color: white;
+    font-size: 1.5em;
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-areas: 
     "bottom1 bottom2";
     align-items: center;
     justify-content: center;
+    padding-right: 30px;
 
 }
 
