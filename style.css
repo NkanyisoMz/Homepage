@@ -13,6 +13,8 @@ body{
     "top1 top2";
     align-items: center;
     justify-content: center;
+    padding-bottom: 40px;
+    padding-top: 40px;
 }
 
 .top-image{
@@ -38,6 +40,10 @@ body{
 .middle-container{
     background-color: rgb(168, 240, 240);
 
+}
+
+.middle-container h2{
+    padding-left: 60px;
 }
 
 .main{
@@ -94,8 +100,8 @@ body{
 
 .bottom-container{
     background-color: aquamarine;
-    color: white;
-    font-size: 1.5em;
+    color: black;
+    /*font-size: 1.2em;*/
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-areas: 
@@ -109,11 +115,16 @@ body{
 .contacts{
     grid-area: bottom1;
     text-align: left;
+    width: 350px;
+    padding-left: 60px;
+    padding-top: 20px;
 }
 
 .bottom-image{
     grid-area: bottom2;
     text-align: left;
+    width: 1fr;
+    padding-top: 30px;
 }
 
 
