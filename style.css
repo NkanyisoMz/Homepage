@@ -1,6 +1,7 @@
 body{
     font-family: 'Roboto', sans-serif;
     padding: 50px;
+    background-color: white;
     
 }
 
@@ -38,7 +39,7 @@ body{
 
 
 .middle-container{
-    background-color: rgb(168, 240, 240);
+    background-color: white;
 
 }
 
@@ -75,7 +76,8 @@ body{
 }
 
 .project{
-    background-color: rgb(164, 107, 218);
+    background-color: white;
+    color: black;
     display: grid;
     grid-template-columns: 50% 1fr;
     grid-template-areas: 
@@ -83,6 +85,8 @@ body{
     "name socials"
     "description description";
     width: 250px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px rgb(0, 0,0,0.5);
 }
 
 .project_image{
