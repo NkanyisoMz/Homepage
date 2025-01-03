@@ -25,8 +25,10 @@ body{
         "top2"; /* Stacks top-image above about-me */
     }
   
-    .about-me {
+    .about-me .top-image{
       width: auto; /* Ensure it adapts to mobile width */
+      padding-left: 0;
+      padding-right: 0;
     }
 
     .bottom-container {
@@ -94,6 +96,18 @@ body{
 @media(min-width: 600px) and (max-width: 1024px){
     .main{
         grid-template-columns: repeat(2,1fr); /*Two columns */
+    }
+
+    .top-container{
+        gap: 10px;
+    }
+    .top-image{
+        height:200px;
+        width: auto;
+    }
+    .about-me{
+        width: auto;
+        margin-left: 30px;
     }
 }
 
