@@ -29,17 +29,23 @@ body{
       width: auto; /* Ensure it adapts to mobile width */
     }
 
-    .bottom-container{
-        grid-template-columns: 1fr; /* Single column */
-      grid-template-areas: 
-      "bottom1" 
-      "bottom2"; /* Stacks top-image above about-me */
-
-    }
-
-    .bottom-image .contacts{
-        width: auto;
-    }
+    .bottom-container {
+        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-areas: 
+          "bottom1"
+          "bottom2"; /* Stacks contacts above the image */
+      }
+    
+      .contacts {
+        text-align: center; /* Center-align text for smaller screens */
+        width: auto; /* Adapt to full width */
+        padding-left: 0; /* Remove padding for mobile */
+        padding-top: 10px; /* Adjust spacing for mobile */
+      }
+    
+      .bottom-image {
+        display: none;
+      }
   }
 .top-image{
     grid-area: top1;
