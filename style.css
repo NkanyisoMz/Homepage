@@ -14,10 +14,33 @@ body{
     "top1 top2";
     align-items: center;
     justify-content: center;
-    padding-bottom: 40px;
-    padding-top: 40px;
+    padding: 40px 0;
 }
+/* Mobile Layout (Stack Divs Vertically) */
+@media (max-width: 599px) {
+    .top-container {
+      grid-template-columns: 1fr; /* Single column */
+      grid-template-areas: 
+        "top1"
+        "top2"; /* Stacks top-image above about-me */
+    }
+  
+    .about-me {
+      width: auto; /* Ensure it adapts to mobile width */
+    }
 
+    .bottom-container{
+        grid-template-columns: 1fr; /* Single column */
+      grid-template-areas: 
+      "bottom1" 
+      "bottom2"; /* Stacks top-image above about-me */
+
+    }
+
+    .bottom-image .contacts{
+        width: auto;
+    }
+  }
 .top-image{
     grid-area: top1;
     text-align: right;
@@ -159,7 +182,7 @@ body{
 .bottom-image{
     grid-area: bottom2;
     text-align: left;
-    width: 1fr;
+    /*width: 1fr;*/
     padding-top: 30px;
 }
 
