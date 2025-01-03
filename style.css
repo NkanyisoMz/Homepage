@@ -44,6 +44,7 @@ body{
 
 .middle-container h2{
     padding-left: 60px;
+    margin-bottom: 20px;
 }
 
 .main{
@@ -90,12 +91,16 @@ body{
 }
 .project_name{
     grid-area: name;
+    padding-left: 20px;
 }
 .socials{
     grid-area: socials;
+    padding-right: 20px;
 }
 .description{
     grid-area: description;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .bottom-container{
@@ -109,6 +114,7 @@ body{
     align-items: center;
     justify-content: center;
     padding-right: 30px;
+    margin-top: 20px;
 
 }
 
@@ -118,6 +124,32 @@ body{
     width: 350px;
     padding-left: 60px;
     padding-top: 20px;
+}
+
+.formal{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-areas: 
+    "phone phone-number"
+    "email email-text";
+    margin-bottom: 5px;
+
+}
+
+.phone{
+    grid-area: phone;
+}
+
+.email{
+    grid-area: email;
+}
+
+.phone-numbers{
+    grid-area: phone-number;
+}
+
+.email-text{
+    grid-area: email-text;
 }
 
 .bottom-image{
