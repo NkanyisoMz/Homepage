@@ -1,6 +1,7 @@
 body{
     font-family: 'Roboto', sans-serif;
-    padding: 50px;
+    padding: 0;
+    margin: 0;
     background-color: white;
     
 }
@@ -30,6 +31,16 @@ body{
       padding-left: 0;
       padding-right: 0;
     }
+
+    .main {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 15px;
+        padding: 0 10px; /* Reduce padding for small screens */
+      }
+    
+      .project {
+        max-width: 100%; /* Allow full-width display */
+      }
 
     .bottom-container {
         grid-template-columns: 1fr; /* Single column layout */
@@ -69,23 +80,25 @@ body{
 }
 
 
-.middle-container{
+/* General styling for middle-container */
+.middle-container {
     background-color: white;
-
-}
-
-.middle-container h2{
-    padding-left: 60px;
+    padding: 0; /* Remove any extra padding */
+    margin: 0; /* Remove margin to avoid unnecessary space */
+  }
+  .middle-container h2 {
+    padding-left: 0; /* Remove left padding */
+    text-align: center; /* Center the heading */
     margin-bottom: 20px;
-}
-
-.main{
+  }
+/* Main container grid setup */
+.main {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding-left: 10%;
-}
-
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Auto adjust grid layout */
+    gap: 20px; /* Space between grid items */
+    padding: 0 5%; /* Left and right padding of 5% */
+    box-sizing: border-box; /*include padding in width calculations*/
+  }
 .project .socials{
     text-align: right;
     padding-right: 10px;
@@ -96,6 +109,10 @@ body{
 @media(min-width: 600px) and (max-width: 1024px){
     .main{
         grid-template-columns: repeat(2,1fr); /*Two columns */
+        gap: 20px;
+    }
+    .project{
+        width: auto;
     }
 
     .top-container{
@@ -140,7 +157,8 @@ body{
     "image image"
     "name socials"
     "description description";
-    width: 250px;
+    max-width: 350px;
+    width: 100%;
     border: 1px solid black;
     box-shadow: 5px 5px 5px rgb(0, 0,0,0.5);
 }
@@ -148,19 +166,21 @@ body{
 .project_image{
     grid-area: image;
     width: 100%;
+    height: auto;
 }
 .project_name{
     grid-area: name;
-    padding-left: 20px;
+    padding: 10px 20px 5px 20px;
+    font-weight: bold;
 }
 .socials{
     grid-area: socials;
-    padding-right: 20px;
+    padding: 10px 20px 5px 20px;
 }
 .description{
     grid-area: description;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
 }
 
 .bottom-container{
