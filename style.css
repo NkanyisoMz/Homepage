@@ -23,13 +23,20 @@ body{
       grid-template-columns: 1fr; /* Single column */
       grid-template-areas: 
         "top1"
-        "top2"; /* Stacks top-image above about-me */
+        "top2";
+        gap: 10px;
     }
   
-    .about-me .top-image{
-      width: auto; /* Ensure it adapts to mobile width */
-      padding-left: 0;
-      padding-right: 0;
+    .about-me{
+      width: 100%; /* Ensure it adapts to mobile width */
+      padding: 15px;
+    }
+    .about-me p {
+        font-size: 1em; /* Make text size smaller for readability */
+        line-height: 1.5; /* Improve readability */
+    }
+    .overlay-text {
+        font-size: 2em; /* Adjust font size for smaller screens */
     }
 
     .main {
@@ -45,15 +52,17 @@ body{
     .bottom-container {
         grid-template-columns: 1fr; /* Single column layout */
         grid-template-areas: 
-          "bottom1"
-          "bottom2"; /* Stacks contacts above the image */
+          "bottom1"; 
+          padding: 10px;
       }
     
       .contacts {
         text-align: center; /* Center-align text for smaller screens */
-        width: auto; /* Adapt to full width */
-        padding-left: 0; /* Remove padding for mobile */
-        padding-top: 10px; /* Adjust spacing for mobile */
+        width: 100%; 
+        padding: 0;
+        margin: 0 auto;
+        max-width: 100%;
+        box-sizing: border-box;
       }
     
       .bottom-image {
@@ -61,8 +70,27 @@ body{
       }
   }
 .top-image{
+    position: relative;
+    width: 100%;
     grid-area: top1;
     text-align: right;
+}
+.top-image img{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: 40px;
+}
+.overlay-text {
+    position: absolute; 
+    bottom: 5%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white; 
+    font-size: 3em; 
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+    z-index: 10; 
 }
 
 .about-me{
@@ -70,13 +98,16 @@ body{
     text-align: left;
     width: 350px;
     background-color: antiquewhite;
-    padding-left: 20px;
-    padding-right: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-left: 0;
     
 }
 
-.about-me .socials{
+.socials{
     text-align: right;
+    margin-top: 10px;
 }
 
 
@@ -117,16 +148,21 @@ body{
 
     .top-container{
         gap: 10px;
-        grid-template-columns: 40% 60%;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: center;
     }
     .top-image{
-        width: 80px;
+        width: 100%;
         height: auto;
         padding-top: 0;
     }
     .about-me{
-        width: auto;
-        margin-left: 30px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+        box-sizing: border-box;
     }
     .bottom-container{
         grid-template-columns: 100%;
@@ -193,17 +229,23 @@ body{
     "bottom1 bottom2";
     align-items: center;
     justify-content: center;
-    padding-right: 30px;
-    margin-top: 20px;
+    padding-right: 0 30px;
+    margin-top: 0px;
+    width: 100vw;
+    box-sizing: border-box;
 
 }
 
 .contacts{
     grid-area: bottom1;
     text-align: left;
-    width: 350px;
-    padding-left: 60px;
-    padding-top: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .formal{
@@ -235,8 +277,8 @@ body{
 .bottom-image{
     grid-area: bottom2;
     text-align: left;
-    /*width: 1fr;*/
     padding-top: 30px;
+    max-width: 100%;
 }
 
 
